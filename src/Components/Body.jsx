@@ -31,7 +31,7 @@ const Body = ({
   }
 
   return data.map((single, i) =>
-    <tr key={ `row-${i}` }>
+    <tr key={ `row-${i}` } className={ single.className }>
       {
         columnsArr.map((col) => {
           let arrPropVal;
@@ -44,7 +44,7 @@ const Body = ({
           }
 
           return (
-            <td key={ `col-${col}` }>
+            <td data-column={ col }  key={ `col-${col}` }>
               {
                 arrPropVal || single[col]
               }
